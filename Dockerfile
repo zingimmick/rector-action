@@ -1,0 +1,17 @@
+FROM php:7.4-alpine
+
+LABEL "com.github.actions.name"="Rector Action"
+LABEL "com.github.actions.description"="Use Rector via GithubAction."
+LABEL "com.github.actions.icon"="check"
+LABEL "com.github.actions.color"="blue"
+
+LABEL "repository"="http://github.com/zingimmick/rector-action"
+LABEL "homepage"="http://github.com/actions"
+LABEL "maintainer"="zingimmick<zingimmick@outlook.com>"
+
+RUN wget https://github.com/rectorphp/rector-prefixed/raw/v0.7.48/rector.phar -O rector \
+    && chmod a+x rector \
+    && mv rector /usr/local/bin/rector
+
+ADD entrypoint.sh /entrypoint.sh
+ENTRYPOINT ["/entrypoint.sh"]
