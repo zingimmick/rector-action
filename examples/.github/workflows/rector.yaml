@@ -22,4 +22,5 @@ jobs:
       - uses: actions/checkout@v2
       - uses: zingimmick/rector-action@develop
         with:
+          version: 0.7.47
           args: --config=rector.yaml
