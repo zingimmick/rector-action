@@ -20,6 +20,7 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       - uses: actions/checkout@v2
-      - uses: zingimmick/rector-action@develop
+      - uses: zingimmick/rector-action@select-version
         with:
+          version: 0.7.47
           args: --config=rector.yaml
