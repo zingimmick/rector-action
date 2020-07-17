@@ -15,7 +15,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Rector
-      uses: zingimmick/rector-action@0.0.3
+      uses: zingimmick/rector-action@0.0.1
 ```
 
 _to use a custom config for example, --dry-run and --clear-cache option:_
@@ -29,7 +29,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Rector
-      uses: zingimmick/rector-action@0.0.3
+      uses: zingimmick/rector-action@0.0.1
 +      with:
 +        args: --config=rector.yaml --dry-run --clear-cache
 ```
