@@ -4,10 +4,10 @@
 
 You can use it as a Github Action like this:
 
-_.github/workflows/lint.yml_
+_.github/workflows/rector.yml_
 ```
 on: [push, pull_request]
-name: lint
+name: rector
 jobs:
   rector:
     name: Rector
@@ -18,7 +18,26 @@ jobs:
       uses: zingimmick/rector-action@0.0.1
 ```
 
-_to use a custom config for example, --dry-run and --clear-cache option:_
+to use for lint:
+
+_.github/workflows/rector.yml_
+```diff
+on: [push, pull_request]
+name: rector
+jobs:
+  rector:
+    name: Rector
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Rector
+      uses: zingimmick/rector-action@0.0.1
++      with:
++        args: --dry-run
+```
+
+to use a custom config for example, --dry-run and --clear-cache option:
+
 ```diff
 on: [push, pull_request]
 name: lint
