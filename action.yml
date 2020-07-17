@@ -13,3 +13,5 @@ name: 'Rector Action'
 runs:
     using: 'docker'
     image: 'Dockerfile'
+    args:
+        - ${{ inputs.version }}
