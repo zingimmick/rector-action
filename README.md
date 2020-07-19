@@ -15,7 +15,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Rector
-      uses: zingimmick/rector-action@0.0.1
+      uses: zingimmick/rector-action@0.0.2
 ```
 
 to use for lint:
@@ -31,7 +31,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Rector
-      uses: zingimmick/rector-action@0.0.1
+      uses: zingimmick/rector-action@0.0.2
 +      with:
 +        args: --dry-run
 ```
@@ -48,7 +48,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Rector
-      uses: zingimmick/rector-action@0.0.1
+      uses: zingimmick/rector-action@0.0.2
 +      with:
 +        args: --config=rector.yaml --dry-run --clear-cache
 ```
