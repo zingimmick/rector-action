@@ -10,6 +10,15 @@ description: 'Use Rector via GithubAction.'
 
 name: 'Rector Action'
 
+inputs:
+    version:
+        description: 'Which version of Rector'
+        required: false
+        default: 'master'
+
 runs:
     using: 'docker'
     image: 'Dockerfile'
+    args:
+        - ${{ inputs.version }}
+        - ${{ inputs.args }}
