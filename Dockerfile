@@ -1,4 +1,4 @@
-FROM php:7.4-alpine
+FROM php:7.2-alpine
 
 LABEL "com.github.actions.name"="Rector Action"
 LABEL "com.github.actions.description"="Use Rector via GithubAction."
